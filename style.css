@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(245, 254, 255);
+}
+
+#conteudo{
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+section:hover{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.card-motivos:hover{
+    padding-left: .5rem;
+    transition: .3s;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+
+.icon{
+    border-radius: 50%;
+}
+
+.icon:hover{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    transition: .3s;
+}
+
+.text-red{
+    color: rgb(250, 85, 85);
+}
+
+.img-sobre{
+    height: 30rem;
+    background-image: url('https://cdn.pixabay.com/photo/2021/05/27/18/15/motorcycle-6288958_960_720.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+a:hover{
+    color: brown;
+}
