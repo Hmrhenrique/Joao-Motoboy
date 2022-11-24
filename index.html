@@ -14,9 +14,54 @@
 </head>
 
 <body>
-    <!-- Como trabalhamos -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-black fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#Topo">
+                    <img src="img/12f8866d-eba3-4aef-ad92-f4de0dbbcab0.jpg" alt="João Motoboy logo" width="50" height="50" style="border-radius: 50%;">
+                </a>
+                <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse rowjustify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-light" href="#Como-Trabalhamos">Como Trabalhamos   </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-light" href="#Porque-nós">Porque nós?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-light" href="#Sobre">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-light" href="#Contatos">Contatos</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
     <main id="conteudo">
-        <section>
+
+        <!-- Introduçao -->
+        <section class="Introduçao-img" id="Topo">
+            <div class="black-overlay"></div>
+            <div class="container text-light">
+                <div class="row">
+                    <div class="col-10 col-md-6" style="margin-top: 10rem;">
+                        <h1 class="mb-3">João Motoboy</h1>
+                        <p>Empresa de Motoboys para serviço de entregas em Areado-mg</p>
+                        <a type="button" class="btn btn-danger" href="#Contatos">Faça seu pedido</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Como trabalhamos -->
+        <section id="Como-Trabalhamos">
             <div class="container-sm text-center">
                 <h1 class="pt-5 pb-4">Como trabalhamos:</h1>
                 <div class="row aling-items-center justify-content-center">
@@ -69,11 +114,11 @@
             </div>
         </section>
 
-        <!-- Por que escolher nós? -->
-        <section class="bg-black pt-4 pb-2">
+        <!-- Por que nos escolher? -->
+        <section class="bg-black pt-4 pb-2" id="Porque-nós">
             <div class="container-sm ">
                 <div class="row align-items-center">
-                    <div class="col-12 col-md-10  col-lg-6 text-light">
+                    <div class="col-12 col-md-10 col-lg-6 text-light">
                         <h1 class="mb-4 ">Porque nos escolher?</h1>
                         <p class="fw-bold fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
                             consectetur natus, provident ullam hic optio cupiditate molestias nihil! Repellat aliquam
@@ -203,7 +248,7 @@
             </div>
         </section>
         <!-- Contatos -->
-        <section>
+        <section id="Contatos">
             <div class="p-5">
                 <h1 class="text-center mb-4">Entre em contato</h1>
                 <p class="text-center m-auto" style="width: 50vw;">Lorem ipsum dolor sit amet, consectetur adipisicing
