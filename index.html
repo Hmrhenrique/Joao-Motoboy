@@ -17,7 +17,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-black fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#Topo">
+                <a class="navbar-brand" href="#conteudo">
                     <img src="img/12f8866d-eba3-4aef-ad92-f4de0dbbcab0.jpg" alt="João Motoboy logo" width="50" height="50" style="border-radius: 50%;">
                 </a>
                 <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse"
@@ -25,8 +25,8 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse rowjustify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-6">
                         <li class="nav-item">
                             <a class="nav-link fw-bold text-light" href="#Como-Trabalhamos">Como Trabalhamos   </a>
                         </li>
@@ -40,6 +40,7 @@
                             <a class="nav-link fw-bold text-light" href="#Contatos">Contatos</a>
                         </li>
                     </ul>
+                    
 
                 </div>
             </div>
@@ -49,19 +50,32 @@
 
         <!-- Introduçao -->
         <section class="Introduçao-img" id="Topo">
-            <div class="black-overlay"></div>
+            
             <div class="container text-light">
+                <!-- Para telas grandes -->
                 <div class="row">
-                    <div class="col-10 col-md-6" style="margin-top: 10rem;">
+                    <div class="col-3 d-none d-md-block img-fluid pt-5 pb-4">
+                        <img src="img/JM-João-Motoboy-02.png" alt="logo João Motoboy" class="img-fluid">
+                    </div>
+                </div>
+                <!-- Para telas pequenas -->
+                <div class="row">
+                    <div class="col-5 d-block d-md-none offset-0 img-fluid pt-5 pb-4 ms-4">
+                        <img src="img/JM-João-Motoboy-03.png" alt="logo João Motoboy" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">       
+                    <div class="col-10 col-md-6">
                         <h1 class="mb-3">João Motoboy</h1>
-                        <p>Empresa de Motoboys para serviço de entregas em Areado-mg</p>
-                        <a type="button" class="btn btn-danger" href="#Contatos">Faça seu pedido</a>
+                        <p>Empresa de Motoboys para serviço de entregas</p>
+                        <a type="button" class="btn btn-danger" href="#Contatos">Entre em contato</a>
                     </div>
                 </div>
             </div>
+            
         </section>
         <!-- Como trabalhamos -->
-        <section id="Como-Trabalhamos">
+        <section id="Como-Trabalhamos" class="pt-4">
             <div class="container-sm text-center">
                 <h1 class="pt-5 pb-4">Como trabalhamos:</h1>
                 <div class="row aling-items-center justify-content-center">
@@ -115,10 +129,10 @@
         </section>
 
         <!-- Por que nos escolher? -->
-        <section class="bg-black pt-4 pb-2" id="Porque-nós">
+        <section class="bg-black pb-2 pt-4" id="Porque-nós">
             <div class="container-sm ">
                 <div class="row align-items-center">
-                    <div class="col-12 col-md-10 col-lg-6 text-light">
+                    <div class="col-12 col-md-10 col-lg-6 text-light pt-5 pt-md-0">
                         <h1 class="mb-4 ">Porque nos escolher?</h1>
                         <p class="fw-bold fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
                             consectetur natus, provident ullam hic optio cupiditate molestias nihil! Repellat aliquam
@@ -138,7 +152,7 @@
                         <a type="button" class="btn btn-danger d-none d-lg-block" href="#Sobre"
                             style="width: 7rem;">Saiba mais</a>
                     </div>
-                    <div class="col-12 col-lg-5 offset-lg-1 text-light mt-4 mt-md-0 ">
+                    <div class="col-12 col-lg-5 offset-lg-1 text-light mt-4 ">
 
                         <!-- Só aparece em telas pequenas -->
                         <div class="d-block d-sm-none">
@@ -183,7 +197,7 @@
                         </div>
 
                         <!-- Só aparece em telas grandes -->
-                        <div class="card card-motivos bg-danger mb-3 d-none d-sm-block">
+                        <div class="card card-motivos bg-danger mb-3 d-none d-sm-block mt-5">
                             <div class="card-body">
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nam vel
@@ -225,7 +239,7 @@
         </section>
 
         <!-- Sobre -->
-        <section id="Sobre">
+        <section id="Sobre" class="pt-5">
             <div class="container-sm">
                 <div class="row align-items-center pt-5 pb-5">
                     <div
@@ -248,7 +262,7 @@
             </div>
         </section>
         <!-- Contatos -->
-        <section id="Contatos">
+        <section id="Contatos" class="pt-4">
             <div class="p-5">
                 <h1 class="text-center mb-4">Entre em contato</h1>
                 <p class="text-center m-auto" style="width: 50vw;">Lorem ipsum dolor sit amet, consectetur adipisicing
