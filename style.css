@@ -14,12 +14,24 @@ body{
     background-color: rgba(0, 0, 0, .5);
 }
 
-.Introduçao-img{
-    background-image: url('https://cdn.pixabay.com/photo/2017/06/22/10/00/harley-2430193_960_720.jpg');
-    min-height: 89vh;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
+
+.video-player-container{
+    position: relative;
+    height: 89vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.bg-video{
+    position: absolute;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
 }
 
 #img-logo{
@@ -40,11 +52,6 @@ body{
 
 .icon{
     border-radius: 50%;
-}
-
-.icon:hover{
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-    transition: .3s;
 }
 
 .text-red{
@@ -99,4 +106,21 @@ a:hover{
     transform: translateX(0%);
 }
 
+.show-on-video-end{
+    animation: wait-to-show 7s;
+}
 
+@keyframes wait-to-show{
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
