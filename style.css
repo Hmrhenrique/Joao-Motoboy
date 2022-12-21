@@ -14,11 +14,6 @@ body{
     background-color: rgba(0, 0, 0, .5);
 }
 
-section:hover{
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-    transition: .3s;
-}
-
 .Introduçao-img{
     background-image: url('https://cdn.pixabay.com/photo/2017/06/22/10/00/harley-2430193_960_720.jpg');
     min-height: 89vh;
@@ -72,3 +67,36 @@ a:hover{
     height: 2rem;
     border-radius: 50%;
 }
+
+.hidden-text{
+    opacity: 0;
+    transform: translateY(40%);
+    transition: all 1.5s;
+}
+
+.show-text{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.hidden-icons{
+    opacity: 0;
+    transition: .6s;
+}
+
+.show-icons{
+    opacity: 1;
+}
+
+.hidden-left-to-right{
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 3s;
+}
+
+.show-left-to-right{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
