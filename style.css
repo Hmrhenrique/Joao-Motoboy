@@ -34,6 +34,14 @@ body{
     z-index: -100;
 }
 
+.h1-Jm{
+    background: -webkit-linear-gradient(left,rgb(255, 182, 182), rgb(255, 110, 11), rgb(255, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    font-size: 250%;
+}
+
 #img-logo{
     width: 10rem;
     height: 10rem;
