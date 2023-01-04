@@ -1,0 +1,35 @@
+.hidden--text{
+    opacity: 0;
+    transform: translateY(40%);
+    transition: all 1.5s;
+}
+
+.show--text{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.hidden--text-light .show--text{
+    transform: translateY(0%);
+    opacity: .35;
+}
+
+.hidden--icons{
+    opacity: 0;
+    transition: .6s;
+}
+
+.show--icons{
+    opacity: 1;
+}
+
+.hidden--left--to--right{
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 3s;
+}
+
+.show--left--to--right{
+    opacity: 1;
+    transform: translateX(0%);
+}

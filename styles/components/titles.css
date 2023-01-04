@@ -1,0 +1,37 @@
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 3rem 0;
+    opacity: .9;
+    line-height: 2rem;
+}
+
+#Topo h1{
+    margin-top: 2em;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    font-weight: 550;
+}
+
+#PorqueNos h1 {
+    font-size: 2.3rem;
+    text-align: start;
+    font-weight: 550;
+}
+
+#Contatos h1 {
+    font-size: 2.3rem;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 550;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+

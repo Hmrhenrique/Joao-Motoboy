@@ -5,441 +5,351 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>João Motoboy</title>
+    <title>Equipe JM - serviço de entregas em Areado e Monte Belo</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/animation.css">
 
-    <link rel="shortcut icon" href="img e videos/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/components/card.css">
+    <link rel="stylesheet" href="styles/components/titles.css">
+    <link rel="stylesheet" href="styles/components/row&columns.css">
+    <link rel="stylesheet" href="styles/components/button.css">
+    <link rel="stylesheet" href="styles/components/imgs&videos.css">
+    <link rel="stylesheet" href="styles/components/border.css">
+    <link rel="stylesheet" href="styles/components/navbar.css">
+    <link rel="stylesheet" href="styles/components/icon.css">
+
+    
+
+    <link rel="shortcut icon" href="img&videos/icon.ico" type="image/x-icon">
+
+    <script src="scripts/app.js" defer></script>
 </head>
 
 <body>
+    <!-- NavBar -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-black fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand hidden-left-to-right" href="#conteudo">
-                    <img src="img e videos/12f8866d-eba3-4aef-ad92-f4de0dbbcab0.jpg" alt="João Motoboy logo" width="50"
-                        height="50" style="border-radius: 50%;">
-                </a>
-                <button class="navbar-toggler hidden-left-to-right" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgba(255, 120, 120, 0.8);">
-                    <span class="navbar-toggler-icon"></span>
+        <img class="logo" src="img&videos/JM-João-Motoboy-03.png" alt="Logo Equipe JM">
+        <nav>
+            <div class="nav__dropdown">
+                <button class="btn bnt--black" onclick="dropdown()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list text-light" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                      </svg>
                 </button>
-                <div class="collapse navbar-collapse hidden-left-to-right" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 col-6">
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-light" href="#Como-Trabalhamos">Como Trabalhamos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-light" href="#Porque-nós">Porque nós?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-light" href="#Sobre">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold text-light" href="#Contatos">Contatos</a>
-                        </li>
-                    </ul>
-
-                    <!-- somente para telas grandes -->
-                    <ul class="navbar-nav mb-2 mb-lg-0 col-6 justify-content-end pe-5 d-none d-lg-flex">
-                        <li class="nav-item">
-                            <a class="nav-link ms-3 bg-danger icon hidden-left-to-right" href="https://wa.me/message/Z4YIXTPRUGDXM1" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-whatsapp bg-danger text-light" viewBox="-7 -7 30 30">
-                                    <path
-                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ms-3 bg-danger icon hidden-left-to-right" href="https://www.instagram.com/jm.equipe/?next=%2F" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-instagram bg-danger text-light" viewBox="-7 -7 30 30">
-                                    <path
-                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ms-3 bg-danger icon hidden-left-to-right" href="https://www.tiktok.com/@joaomotoboyareado?_t=8YNT2CAUm8c&_r=1" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-tiktok bg-danger text-light" viewBox="-7 -7 30 30">
-                                    <path
-                                        d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link ms-3 bg-danger icon hidden-left-to-right" href="#Contatos" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-twitter bg-danger text-light" viewBox="-7 -7 30 30">
-                                    <path
-                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://www.facebook.com/joao.ramos.98031506" class="nav-link ms-3 bg-danger icon hidden-left-to-right" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-facebook text-light" viewBox="-7 -7 30 30">
-                                    <path
-                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link ms-3 bg-danger icon hidden-left-to-right" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                                    class="bi bi-envelope-at-fill text-light" viewBox="-7 -7 30 30">
-                                    <path
-                                        d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
-                                    <path
-                                        d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+                <ul class="dropdown__list">
+                    <li>
+                        <a href="#" class="btn">Como trabalhamos</a>
+                    </li>
+                    <li">
+                        <a href="#" class="btn">Porque nós</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn">Contatos</a>
+                    </li>
+                    <li>
+                    </li>
+                </ul>
             </div>
+
+
+            <ul class="nav__links">
+                <li class="hidden--left--to--right">
+                    <a href="#" class="btn">Como trabalhamos</a>
+                </li>
+                <li class="hidden--left--to--right">
+                    <a href="#" class="btn">Porque nós</a>
+                </li>
+                <li class="hidden--left--to--right">
+                    <a href="#" class="btn">Sobre</a>
+                </li>
+                <li class="hidden--left--to--right">
+                    <a href="#" class="btn">Contatos</a>
+                </li>
+                <li class="hidden--left--to--right">
+                </li>
+            </ul>
         </nav>
-    </header>
-    <main id="conteudo">
-
-        <!-- Introduçao -->
-        <section id="Topo" class="video-player-container">
-            <video class="bg-video" autoplay muted>
-                <source src="img e videos/jm-bg-video.mp4" type="video/mp4">
-            </video>  
-            <div class="container">
-                <!-- Somente para telas pequenas -->
-                <div class="row d-none d-md-block mt-5 text-light ">
-                    <div class="col-10 col-md-6">
-                        <h1 class="mb-3 hidden-left-to-right">Equipe JM</h1>
-                        <p class="hidden-left-to-right">Empresa de Motoboys para serviço de entregas</p>
-                        <a type="button" class="btn btn-danger hidden-left-to-right" href="https://wa.me/message/Z4YIXTPRUGDXM1" target="_blank">Entre em
-                        contato</a>
-                </div>
-                </div>
-
-                <!-- Somente pra telas peuqenas e medias -->
-                <div class="show-on-video-end d-flex d-lg-none mt-5 mb-4 justify-content-center justify-content-md-start">
-                    <a href="https://wa.me/message/Z4YIXTPRUGDXM1" class="text-light" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                            class="bi bi-whatsapp icon bg-danger" viewBox="-7 -7 30 30">
-                            <path
-                                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/jm.equipe/?next=%2F" class="ms-3 text-light" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                            class="bi bi-instagram icon bg-danger" viewBox="-7 -7 30 30">
-                            <path
-                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@joaomotoboyareado?_t=8YNT2CAUm8c&_r=1" class="ms-3 text-light" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                            class="bi bi-tiktok icon bg-danger" viewBox="-7 -7 30 30">
-                            <path
-                                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
-                        </svg>
-                    </a>
-                    <a href="" class="ms-3 text-light" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                            class="bi bi-twitter icon bg-danger" viewBox="-7 -7 30 30">
-                            <path
-                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/joao.ramos.98031506" class="ms-3 text-light" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                            class="bi bi-facebook icon bg-danger" viewBox="-7 -7 30 30">
-                            <path
-                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                        </svg>
-                    </a>
-                    <a href="" class="nav-link ms-3 icon bg-danger" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                            class="bi bi-envelope-at-fill text-light" viewBox="-7 -7 30 30">
-                            <path
-                                d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
-                            <path
-                                d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
-                        </svg>
-                    </a>
-                </div>
-                <!-- somente em telas pequenas  -->
-                <h1 class="show-on-video-end text-light text-center h1-Jm d-block d-md-none">Equipe JM</h1>
-            </div>
-
-        </section>
-        <!-- Como trabalhamos -->
-        <section id="Como-Trabalhamos" class="pt-5">
-            <div class="container-sm text-center">
-                <h1 class="pt-5 pb-4 hidden-left-to-right">Como trabalhamos:</h1>
-                <div class="row aling-items-center justify-content-center">
-                    <div class="col-12 col-lg-4 card bg-transparent border-0">
-                        <div class="card-body">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
-                                class="bi bi-envelope-fill bg-danger icon hidden-icons " viewBox="-7 -7 30 30">
-                                <path
-                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                            </svg>
-                            <p class="mt-3 fw-bold hidden-text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, repellat et saepe
-                                quis
-                                eligendi eos culpa magnam, quas voluptas laudantium deserunt dolor nemo eaque amet
-                                consequatur! Reiciendis nam quaerat perferendis.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 card bg-transparent border-0">
-                        <div class="card-body">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
-                                class="bi bi-geo-alt-fill bg-danger icon hidden-icons" viewBox="-7 -7 30 30">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                            </svg>
-                            <p class="mt-3 fw-bold hidden-text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, repellat et saepe
-                                quis
-                                eligendi eos culpa magnam, quas voluptas laudantium deserunt dolor nemo eaque amet
-                                consequatur! Reiciendis nam quaerat perferendis.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-4 card bg-transparent border-0">
-                        <div class="card-body">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
-                                class="bi bi-box-seam-fill bg-danger icon hidden-icons" viewBox="-7 -7 30 30">
-                                <path fill-rule="evenodd"
-                                    d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z" />
-                            </svg>
-                            <p class="mt-3 fw-bold hidden-text">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, repellat et saepe
-                                quis
-                                eligendi eos culpa magnam, quas voluptas laudantium deserunt dolor nemo eaque amet
-                                consequatur! Reiciendis nam quaerat perferendis.
-                            </p>
-                        </div>  
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Por que nos escolher? -->
-        <section class="bg-black pb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-black"><path fill="#f5feff" fill-opacity="1" d="M0,64L60,85.3C120,107,240,149,360,149.3C480,149,600,107,720,101.3C840,96,960,128,1080,149.3C1200,171,1320,181,1380,186.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-            <div class="container-sm pt-5 pt-md-0" id="Porque-nós">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-10 col-lg-6 text-light pt-5 pt-md-0">
-                        <h1 class="mb-4 hidden-left-to-right">Porque nos escolher?</h1>
-                        <p class="fw-bold fst-italic hidden-text">Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Quod
-                            consectetur natus, provident ullam hic optio cupiditate molestias nihil! Repellat aliquam
-                            voluptatum, quidem id eos consequuntur. Dolorem eaque fuga ex quam! Lorem ipsum dolor sit
-                            amet
-                            consectetur adipisicing elit. Cumque beatae ex sint aperiam nemo quos nostrum, placeat
-                            assumenda
-                            consequuntur, quaerat ab deserunt incidunt saepe! Sequi natus sint quod placeat quasi! </p>
-                        <p class="text-muted fst-italic hidden-text">Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Sed
-                            nulla
-                            tempora quos? Ipsam libero ipsa, itaque alias modi asperiores, incidunt, earum error illo
-                            doloribus natus facere! Illum incidunt veniam eligendi. Lorem ipsum, dolor sit amet
-                            consectetur
-                            adipisicing elit. Unde dolor quidem iste perspiciatis quae eveniet odio tenetur maxime
-                            architecto porro asperiores esse, natus delectus, cupiditate ut adipisci itaque. Pariatur,
-                            natus.</p>
-                        <a type="button" class="btn btn-danger d-none d-lg-block" href="#Sobre"
-                            style="width: 7rem;">Saiba mais</a>
-                    </div>
-                    <div class="col-12 col-lg-5 offset-lg-1 text-light mt-4 ">
-
-                        <!-- Só aparece em telas pequenas -->
-                        <div class="d-block d-sm-none">
-                            <p class="row justify-content-evenly">
-                                <a class="btn btn-danger col-3" data-bs-toggle="collapse" href="#collapse1"
-                                    role="button" aria-expanded="false" aria-controls="collapseExample">
-                                    Motivo 1
-                                </a>
-
-                                <a class="btn btn-danger col-3" data-bs-toggle="collapse" href="#collapse2"
-                                    role="button" aria-expanded="false" aria-controls="collapseExample">
-                                    Motivo 2
-                                </a>
-
-                                <a class="btn btn-danger col-3" data-bs-toggle="collapse" href="#collapse3"
-                                    role="button" aria-expanded="false" aria-controls="collapseExample">
-                                    Motivo 3
-                                </a>
-                            </p>
+        <ul class="nav__icons">
 
 
-                            <div class="collapse" id="collapse1">
-                                <p class="card card-body card-motivos bg-danger">
-                                    Some placeholder content for the collapse component. This panel is hidden by default
-                                    but revealed when the user activates the relevant trigger.
-                                    </>
-                            </div>
-
-                            <div class="collapse" id="collapse2">
-                                <p class="card card-body card-motivos bg-danger">
-                                    Some placeholder content for the collapse component. This panel is hidden by default
-                                    but revealed when the user activates the relevant trigger.
-                                </p>
-                            </div>
-
-                            <div class="collapse" id="collapse3">
-                                <p class="card card-body card-motivos bg-danger">
-                                    Some placeholder content for the collapse component. This panel is hidden by default
-                                    but revealed when the user activates the relevant trigger.
-                                    </>
-                            </div>
-                        </div>
-
-                        <!-- Só aparece em telas grandes -->
-                        <div class="card card-motivos bg-danger mb-3 d-none d-sm-block mt-5">
-                            <div class="card-body">
-                                <p class="hidden-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nam vel
-                                    inventore
-                                    dolor temporibus laboriosam, repellat, sit commodi eos, ex incidunt. Id dolorum
-                                    minus
-                                    quod dolorem voluptas recusandae perspiciatis commodi?
-                                </p>
-                                <h4 class="mt-3">Titulo 1</h4>
-                            </div>
-                        </div>
-                        <div class="card card-motivos bg-danger mb-3 d-none d-sm-block">
-                            <div class="card-body">
-                                <p class="hidden-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nam vel
-                                    inventore
-                                    dolor temporibus laboriosam, repellat, sit commodi eos, ex incidunt. Id dolorum
-                                    minus
-                                    quod dolorem voluptas recusandae perspiciatis commodi?
-                                </p>
-                                <h4 class="mt-3">Titulo 2</h4>
-                            </div>
-                        </div>
-                        <div class="card card-motivos bg-danger mb-3 d-none d-sm-block">
-                            <div class="card-body">
-                                <p class="hidden-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nam vel
-                                    inventore
-                                    dolor temporibus laboriosam, repellat, sit commodi eos, ex incidunt. Id dolorum
-                                    minus
-                                    quod dolorem voluptas recusandae perspiciatis commodi?
-                                </p>
-                                <h4 class="mt-3 ">Titulo 3</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre -->
-        <section>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" ><path fill="#000" fill-opacity="1" d="M0,96L60,117.3C120,139,240,181,360,181.3C480,181,600,139,720,133.3C840,128,960,160,1080,165.3C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-            <div class="container-sm pt-5" id="Sobre">
-                <div class="row align-items-center pt-5 pb-5">
-                    <div
-                        class="col-10 col-lg-5 offset-1 text-uppercase border-start border-red border-5 text-start fst-italic">
-                        <h3 class="hidden-left-to-right">Sobre</h3>
-                        <div class="hidden-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi beatae odio sequi dolorum
-                            natus
-                            inventore in nisi, veritatis cum alias explicabo doloremque a provident? Porro labore sint
-                            neque
-                            laudantium hic? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste architecto
-                            distinctio,
-                            eum velit omnis veniam tenetur quisquam quam, fugiat quos possimus voluptatem quod nobis
-                            nesciunt
-                            accusamus odit natus ut. Minima! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Debitis,
-                            maxime cumque beatae quidem assumenda perferendis eum incidunt similique, at vero doloremque
-                            molestias voluptas minima sequi odit officia mollitia quas blanditiis!
-                        </div>
-                    </div>
-                    <div class="col-md-5 offset-1 text-light d-none d-lg-block img-sobre">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contatos -->
-        <section class="pt-5">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg-black "><path fill="#f5feff" fill-opacity="1" d="M0,32L60,74.7C120,117,240,203,360,208C480,213,600,139,720,117.3C840,96,960,128,1080,149.3C1200,171,1320,181,1380,186.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-            <div class="row px-5 text-light bg-black pt-5 pt-md-0" id="Contatos">
-                    <h1 class="text-center hidden-text pt-5 pt-md-0">Entre em contato</h1>
-                    <p class="text-center m-auto hidden-text">Estamos sempre on-line esperando uma mensagem sua ;)</p>
-            </div>
-            <div class="row bg-black text-light text-center p-5">
-                <div class="col-12 col-md-4 fw-bold">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
-                        class="bi bi-telephone-fill text-red hidden-icons" viewBox="-7 -7 30 30">
-                        <path fill-rule="evenodd"
-                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+            <li>
+                <a href="https://wa.me/message/Z4YIXTPRUGDXM1" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-whatsapp text-light icon hidden--left--to--right" viewBox="-7 -7 30 30">
+                        <path
+                            d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
                     </svg>
+                </a>
+            </li>
 
-                    <h4 class="text-red mb-3 hidden-left-to-right">Telefone/Whatsapp</h4>
-                    <p class="fs-5 hidden-text">
-                        35 9999-9999
-                    </p>
-                </div>
 
-                <div class="col-12 col-md-4 fw-bold">
+            <li>
+                <a href="https://www.instagram.com/jm.equipe/?next=%2F" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-instagram text-light icon hidden--left--to--right" viewBox="-7 -7 30 30">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                </a>
+            </li>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
-                        class="bi bi-envelope-at-fill text-red hidden-icons" viewBox="-7 -7 30 30">
+
+            <li >
+                <a href="https://www.tiktok.com/@joaomotoboyareado?_t=8YNT2CAUm8c&_r=1" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-tiktok text-light icon hidden--left--to--right" viewBox="-7 -7 30 30">
+                        <path
+                            d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
+                    </svg>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#Contatos" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-twitter text-light icon hidden--left--to--right" viewBox="-7 -7 30 30">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="https://www.facebook.com/joao.ramos.98031506" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-facebook text-light icon hidden--left--to--right" viewBox="-7 -7 30 30">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-envelope-at-fill text-light icon hidden--left--to--right" viewBox="-7 -7 30 30">
                         <path
                             d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
                         <path
                             d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
                     </svg>
+                </a>
+            </li>
+        </ul>
+    </header>
 
-                    <h4 class="text-red mb-3 hidden-left-to-right">Email</h4>
+    <!-- topo -->
+    <main class="conteudo">
+        <section class="video__player__container text--light" id="Topo">
+            <video class="bg--video" autoplay muted>
+                <source src="img&videos/jm-bg-video.mp4" type="video/mp4">
+            </video>
 
-                    <p class="fs-5 hidden-text">
-                        Motoboy@equipeJM.com
+            <div class="container hidden--text">
+                <h1 class="text--start">Equipe JM</h1>
+                <p>Empresa para serviços de motoboys em Areado e Monte Belo</p>
+
+                <button class="btn btn--red">Entre em contato</button>
+            </div>
+
+        </section>
+        <!-- Como trabalhamos -->
+        <section class="container" id="ComoTrabalhamos">
+            <h1 class="hidden--left--to--right">Como trabalhamos:</h1>
+            <div class="cardContainer">
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
+                        class="bi bi-envelope-fill card__icon hidden--icons" viewBox="-7 -7 30 30">
+                        <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                    </svg>
+                    <p class="card__text hidden--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+                        distinctio
+                        inventore harum quo at ea temporibus tempore officiis voluptas. Et ut hic placeat ullam voluptas
+                        labore est? Laborum, labore mollitia?</p>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
+                        class="bi bi-geo-alt-fill card__icon hidden--icons" viewBox="-7 -7 30 30">
+                        <path
+                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                    </svg>
+                    <p class="card__text hidden--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
+                        distinctio
+                        inventore harum quo at ea temporibus tempore officiis voluptas. Et ut hic placeat ullam voluptas
+                        labore est? Laborum, labore mollitia?</p>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg hidden--icons" width="85" height="85" fill="currentColor"
+                        class="bi bi-box-seam-fill card__icon hidden--icons" viewBox="-7 -7 30 30">
+                        <path fill-rule="evenodd"
+                            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z" />
+                    </svg>
+                    <p class="card__text hidden--text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim distinctio
+                        inventore harum quo at ea temporibus tempore officiis voluptas. Et ut hic placeat ullam voluptas
+                        labore est? Laborum, labore mollitia?
                     </p>
                 </div>
-
-                <div class="col-12 col-md-4 fw-bold">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
-                        class="bi bi-clock-fill text-red hidden-icons" viewBox="-7 -7 30 30">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                    </svg>
-
-                    <h4 class="text-red mb-3 hidden-left-to-right">Horario de funcionamento</h4>
-
-                    <p class="fs-5 hidden-text">
-                        Todos os dias 8:00 - 23:00 <br>
+            </div>
+        </section>
+        <!-- porque nós -->
+        <section class="bg--dark text--light" id="PorqueNos">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg--dark">
+                <path fill="#fff" fill-opacity="1"
+                    d="M0,64L60,85.3C120,107,240,149,360,149.3C480,149,600,107,720,101.3C840,96,960,128,1080,149.3C1200,171,1320,181,1380,186.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+                </path>
+            </svg>
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 col--lg--5">
+                        <h1 class="hidden--left--to--right">Porque nos escolher?</h1>
+                        <p class="fst--italic fw--bold hidden--text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, delectus velit!
+                            Necessitatibus vero nobis explicabo possimus cupiditate molestiae esse accusamus, eos
+                            perferendis labore
+                            nisi tenetur sunt et, ducimus porro quia.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi odio magni quo veniam id
+                            dolorum similique eos molestiae natus, at quos distinctio eius placeat consectetur nemo,
+                            autem
+                            unde facilis facere.
+                        </p>
+                        <div class="hidden--text-light">
+                            <p class="fst--italic hidden--text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque a reiciendis quam
+                                obcaecati,
+                                laboriosam dignissimos porro necessitatibus molestiae qui dolor harum assumenda
+                                consequatur
+                                expedita facere eius voluptatem dolorem placeat illo.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusantium fugiat,
+                                libero
+                                tempore, facere at, quos quidem hic suscipit necessitatibus veritatis eius officia?
+                                Ratione,
+                                numquam molestias maiores repudiandae iusto sequi.
+                            </p>
+                        </div>
+                        <button class="fw--bold text--light btn btn--red">Saiba mais</button>
+                    </div>
+                    <div class="col-10 col--lg--4">
+                        <div class="cardContainer ">
+                            <div class="card">
+                                <p class="hidden--text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deleniti
+                                    accusantium
+                                    magnam aut, aspernatur labore molestias velit exercitationem dolores autem
+                                    reprehenderit
+                                    eveniet iste nobis veritatis animi id debitis error aliquam.
+                                </p>
+                                <h3 class="hidden--text">Titulo 1</h3>
+                            </div>
+                            <div class="card">
+                                <p class="hidden--text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quia
+                                    voluptatibus similique quas quis qui quam iure assumenda unde repudiandae, aliquid
+                                    ab
+                                    consequatur ea sapiente iste a incidunt. Et?
+                                </p>
+                                <h3 class="hidden--text">Titulo 2</h3>
+                            </div>
+                            <div class="card">
+                                <p class="hidden--text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, consectetur? Quod
+                                    minima
+                                    ducimus deserunt soluta ipsa ex illum voluptates, nemo quaerat. Laboriosam doloribus
+                                    ipsam a voluptates reiciendis laudantium sapiente possimus.
+                                </p>
+                                <h3 class="hidden--text">Titulo 3</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sobre -->
+        <section>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#000" fill-opacity="1"
+                    d="M0,96L60,117.3C120,139,240,181,360,181.3C480,181,600,139,720,133.3C840,128,960,160,1080,165.3C1200,171,1320,149,1380,138.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+                </path>
+            </svg>
+            <div class="row container fst--italic">
+                <div class="col--4 border__about hidden--text">
+                    <h2>SOBRE</h2>
+                    <p class="text--uppercase ">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus, illum corrupti nulla
+                        tempora
+                        asperiores, hic, officiis deserunt ad doloribus ducimus earum laudantium fuga minus nisi laborum
+                        quae temporibus! Sit.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis velit dolores dolore
+                        perferendis maiores, beatae earum amet illo culpa ex eos eum aspernatur animi quia quam sint
+                        asperiores nostrum commodi.
                     </p>
+                </div>
+                <div class="col--5 hidden--left--to--right">
+                    <div class="imgPaisagem"></div>
+                </div>
+            </div>
+        </section>
+        <!-- contatos -->
+        <section class="bg--dark text--light" id="Contatos">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="bg--dark ">
+                <path fill="#f5feff" fill-opacity="1"
+                    d="M0,32L60,74.7C120,117,240,203,360,208C480,213,600,139,720,117.3C840,96,960,128,1080,149.3C1200,171,1320,181,1380,186.7L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+                </path>
+            </svg>
+            <div class="container">
+                <h1 class="hidden--left--to--right">Entre em contato</h1>
+                <p class="text--center mb--5 hidden--text">estamos sempre on-line esperando uma mensagem sua ;)</p>
+                <div class="cardContainer">
+                    <div class="card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
+                            class="bi bi-telephone-fill text--red hidden--icons" viewBox="-7 -7 30 30">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>
+                        <h3 class="text--red card__title fw--normal">Telefone/Whatsapp</h3>
+                        <p class="card__text hidden--text">35 9999-9999</p>
+                    </div>
+                    <div class="card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
+                            class="bi bi-envelope-at-fill text--red hidden--icons" viewBox="-7 -7 30 30">
+                            <path
+                                d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z" />
+                            <path
+                                d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z" />
+                        </svg>
+                        <h3 class="text--red card__title fw--normal">email</h3>
+                        <p class="card__text hidden--text">Motoboy@EquipeJM.com</p>
+                    </div>
+                    <div class="card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor"
+                            class="bi bi-clock-fill text--red hidden--icons" viewBox="-7 -7 30 30">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                        </svg>
+                        <h3 class="text--red card__title fw--normal">Horario de funcionamento</h3>
+                        <p class="card__text hidden--text">Todos os dias das 8:00 as 23:00</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black pt-5 pb-5 text-light text-center">
-        <h4 class="hidden-text">&copy; copyright 2023</h4>
-        <h5 class="hidden-text">site criado por <a href="https://www.instagram.com/hmrhenrique/" target="_blank"
-                class="text-red">HMRHenrique</a></h5>
+    <footer class="bg--dark text--light">
+        <div class="container pt--5 pb--5 hidden--text">
+            <h3 class="text--center">&copy; copyright 2023</h3>
+            <h3 class="text--center">site criado por <a href="https://www.instagram.com/hmrhenrique/" class="text--red text--underline"
+                    target="_blank">HMRDev</a></h3>
+        </div>
     </footer>
-
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-    crossorigin="anonymous"></script>
-<script src="scripts/app.js"></script>
 
 </html>
