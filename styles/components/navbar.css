@@ -12,13 +12,13 @@ header{
     z-index: 100;
 }
 
-a{
+header a{
     text-decoration: none;
-    color: #edf0f1;
 }
 
 .logo{
     margin-right: 1em;
+    margin-left: 2em;
     max-width: 3em;
 }
 
@@ -30,25 +30,57 @@ a{
 
 .dropdown__list{
     right: 2em;
-    padding: 1em 1em 0 1em;
+    padding: 1em;
     display: none;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
     border-radius: 0 0 .3em .3em;
     transition: 1s;
 }
 
 .dropdown__list li{
+    text-align: center;
     padding: .2em 0;
+    border-bottom: 1px rgba(255, 255, 255, 0.4);
+    border-style: groove;
+}
+
+@keyframes dropdown {
+    
+}
+
+.dropdown__list li a{
+    color: white;
 }
 
 .show--dropdown--items .dropdown__list{
     position: absolute;
     display: block;
+    animation: dropdown 3s;
+}
+
+.show--dropdown--items .dropdown__list{
+    animation: dropdown .3s;
+}
+
+@keyframes dropdown {
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
 
 .nav__icons, .nav__links{
     margin: auto;
     display: none;
+}
+
+.nav__icons li a, .nav__links li a{
+    color: white;
 }
 
 .nav__links li{

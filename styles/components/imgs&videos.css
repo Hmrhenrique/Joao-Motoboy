@@ -5,7 +5,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: none;
 }
+
+@media all and (min-width: 576px) {
+    .imgPaisagem{
+        display: block;
+    }
+}   
 
 .video__player__container{
     position: relative;
