@@ -44,10 +44,6 @@ header a{
     border-style: groove;
 }
 
-@keyframes dropdown {
-    
-}
-
 .dropdown__list li a{
     color: white;
 }
@@ -55,11 +51,7 @@ header a{
 .show--dropdown--items .dropdown__list{
     position: absolute;
     display: block;
-    animation: dropdown 3s;
-}
-
-.show--dropdown--items .dropdown__list{
-    animation: dropdown .3s;
+    animation: dropdown .4s;
 }
 
 @keyframes dropdown {
@@ -79,6 +71,10 @@ header a{
     display: none;
 }
 
+.nav__links{
+    margin-right: 2em;
+}
+
 .nav__icons li a, .nav__links li a{
     color: white;
 }
@@ -89,6 +85,7 @@ header a{
 
 .nav__icons li{
     display: inline-block;
+    margin: 0 .5em;
 }
 
 @media all and (min-width: 576px) {
