@@ -33,7 +33,7 @@
         <img class="logo" src="img&videos/JM-João-Motoboy-03.png" alt="Logo Equipe JM">
         <nav>
             <div class="nav__dropdown">
-                <button class="btn bnt--black" onclick="dropdown()">
+                <button class="btn bnt--transparent" onclick="dropdown()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                         class="bi bi-list text-light" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -234,12 +234,12 @@
                                 numquam molestias maiores repudiandae iusto sequi.
                             </p>
                         </div>
-                        <button class="fw--bold text--light btn btn--red">Saiba mais</button>
+                        <button class="fw--bold text--light btn btn--red btn__saiba__mais">Saiba mais</button>
                     </div>
                     <div class="col-10 col--lg--4">
                         <div class="cardContainer ">
-                            <div class="card">
-                                <p class="hidden--text">
+                            <div class="card show--card--slide--item card__slide__item">
+                                <p class="hidden--text ">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deleniti
                                     accusantium
                                     magnam aut, aspernatur labore molestias velit exercitationem dolores autem
@@ -248,7 +248,7 @@
                                 </p>
                                 <h3 class="hidden--text">Titulo 1</h3>
                             </div>
-                            <div class="card">
+                            <div class="card card__slide__item">
                                 <p class="hidden--text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus obcaecati quia
                                     voluptatibus similique quas quis qui quam iure assumenda unde repudiandae, aliquid
@@ -257,7 +257,7 @@
                                 </p>
                                 <h3 class="hidden--text">Titulo 2</h3>
                             </div>
-                            <div class="card">
+                            <div class="card card__slide__item">
                                 <p class="hidden--text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, consectetur? Quod
                                     minima
@@ -269,6 +269,9 @@
                         </div>
                     </div>
                 </div>
+
+                <button class="btn btn--red btn--change--slide--item" onclick="CardSlideDecrease()">< anterior</button>
+                <button class="btn btn--red btn--change--slide--item" onclick="CardSlideIncrease()">proximo ></button>
             </div>
         </section>
         <!-- Sobre -->

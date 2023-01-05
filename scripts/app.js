@@ -47,3 +47,34 @@ function dropdown() {
         dropdown.classList.add('show--dropdown--items')
     }
 }
+
+
+var cardSlideItemIndex = 0
+function CardSlideIncrease(){
+
+    cardSlideItemIndex ++
+    let cardSlideItems = document.querySelectorAll('.card__slide__item')
+
+    if (cardSlideItemIndex === 3){
+        cardSlideItemIndex = 0
+        cardSlideItems[2].classList.remove('show--card--slide--item')
+    }
+
+    cardSlideItems[cardSlideItemIndex].classList.add('show--card--slide--item')
+    cardSlideItems[cardSlideItemIndex - 1].classList.remove('show--card--slide--item')
+
+}
+
+function CardSlideDecrease(){
+
+    cardSlideItemIndex --
+    let cardSlideItems = document.querySelectorAll('.card__slide__item')
+
+    if (cardSlideItemIndex === -1){
+        cardSlideItemIndex = 2
+        cardSlideItems[0].classList.remove('show--card--slide--item')
+    }
+    
+    cardSlideItems[cardSlideItemIndex].classList.add('show--card--slide--item')
+    cardSlideItems[cardSlideItemIndex + 1].classList.remove('show--card--slide--item')
+}

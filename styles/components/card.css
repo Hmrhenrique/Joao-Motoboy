@@ -6,6 +6,7 @@
     flex-wrap: wrap;
 }
 
+
 .card:hover {
     transform: translateX(1%);
 }
@@ -33,6 +34,26 @@
     text-align: start;
     transition: .3s;
     display: none;
+}
+
+#PorqueNos .show--card--slide--item{
+    margin-top: 1em;
+    display: block;
+    animation: card-slide .4s;
+}
+
+@keyframes card-slide {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    60%{
+        transform: translateX(10%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 @media all and (min-width: 992px) {
@@ -63,4 +84,7 @@
     font-weight: bolder;
     font-size: 95%;
 }
+
+
+
 
