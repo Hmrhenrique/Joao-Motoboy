@@ -24,6 +24,11 @@ header .bnt--black:hover{
     font-size: 95%;
 }
 
+#Topo{
+    margin: 0;
+    padding: 0;
+}
+
 #PorqueNos .btn__saiba__mais{
     display: none;
 }

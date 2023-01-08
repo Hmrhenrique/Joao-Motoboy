@@ -80,6 +80,10 @@ p{
     text-decoration: underline;
 }
 
+.text--decoration--none{
+    text-decoration: none;
+}
+
 .text--red{
     color: rgb(250, 85, 85);
 }

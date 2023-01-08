@@ -28,7 +28,7 @@ header a{
     display: inline-block;
 }
 
-.dropdown__list{
+.nav__dropdown__list{
     right: 2em;
     padding: 1em;
     display: none;
@@ -37,18 +37,18 @@ header a{
     transition: 1s;
 }
 
-.dropdown__list li{
+.nav__dropdown__list li{
     text-align: center;
     padding: .2em 0;
     border-bottom: 1px rgba(255, 255, 255, 0.4);
     border-style: groove;
 }
 
-.dropdown__list li a{
+.nav__dropdown__list li a{
     color: white;
 }
 
-.show--dropdown--items .dropdown__list{
+.nav--show--dropdown--items .nav__dropdown__list{
     position: absolute;
     display: block;
     animation: dropdown .4s;

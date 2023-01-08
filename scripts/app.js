@@ -32,19 +32,31 @@ const observerLeftToRight = new IntersectionObserver((entries) => {
 const hiddenLeftToRightElements = document.querySelectorAll('.hidden--left--to--right')
 hiddenLeftToRightElements.forEach((el) => observerLeftToRight.observe(el))
 
-var dropdownSwitch = 0
-function dropdown() {
-    dropdownSwitch ++
-    let dropdown = document.querySelector('.nav__dropdown')
+var navDropdownSwitch = 0
+function navDropdown() {
+    navDropdownSwitch ++
+    let navDropdown = document.querySelector('.nav__dropdown')
 
-    if (dropdownSwitch >= 2){
-        dropdownSwitch = 0
-    }
-
-    if (dropdownSwitch === 0){
-        dropdown.classList.remove('show--dropdown--items')
+    if (navDropdownSwitch%2 === 0){
+        navDropdown.classList.remove('nav--show--dropdown--items')
     } else {
-        dropdown.classList.add('show--dropdown--items')
+        navDropdown.classList.add('nav--show--dropdown--items')
+    }
+}
+
+var WhatsAppIconDropdownSwitch = 0
+function WhatsAppDropdown() {
+    WhatsAppIconDropdownSwitch ++
+    let whatsAppDropdown = document.querySelectorAll('.WhatsApp__Icon__dropdown')
+
+    if (WhatsAppIconDropdownSwitch%2 === 0){
+        whatsAppDropdown.forEach(el => {
+            el.classList.remove('WhatsApp--icon--show--dropdown--items')
+        })
+    } else {
+        whatsAppDropdown.forEach(el => {
+            el.classList.add('WhatsApp--icon--show--dropdown--items')
+        })
     }
 }
 
