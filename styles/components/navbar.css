@@ -51,10 +51,10 @@ header a{
 .nav--show--dropdown--items .nav__dropdown__list{
     position: absolute;
     display: block;
-    animation: dropdown .4s;
+    animation: NavDropdown .4s;
 }
 
-@keyframes dropdown {
+@keyframes NavDropdown {
     0%{
         opacity: 0;
         transform: translateX(-10%);

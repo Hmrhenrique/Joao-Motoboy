@@ -41,10 +41,10 @@
     display: none;
     background-color: rgb(245, 254, 255);
     border-radius: 0 0 .3em .3em;
-    transition: 1s;
 }
 
 .WhatsApp__icon__dropdown__list li{
+    display: block;
     text-align: center;
     padding: .2em 0;
     border-bottom: 1px rgb(0, 0, 0, .2);
@@ -58,17 +58,17 @@
 .WhatsApp--icon--show--dropdown--items .WhatsApp__icon__dropdown__list{
     position: absolute;
     display: block;
-    animation: dropdown .4s;
+    animation: WhatsAppDropdown .4s;
 }
 
-@keyframes dropdown {
+@keyframes WhatsAppDropdown {
     0%{
         opacity: 0;
-        transform: translateX(-10%);
+        transform: scaleY(0%);
     }
 
     100%{
         opacity: 1;
-        transform: translateX(0%);
+        transform: scaleY(100%);
     }
 }
