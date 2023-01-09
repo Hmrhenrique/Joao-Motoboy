@@ -1,4 +1,4 @@
-const navLinks = document.querySelectorAll('header a[href^="#"]');
+const navLinks = document.querySelectorAll('a[href^="#"]');
 
 function getDistanceFromTheTop(element) {
   const id = element.getAttribute("href");

@@ -1,5 +1,5 @@
 .btn{
-    font-weight: lighter;
+    font-weight: light;
     padding: .5em 1.2em;
     margin-top: 1em;
     min-width: 3em;
@@ -24,11 +24,6 @@ header .bnt--black:hover{
     font-size: 95%;
 }
 
-#Topo{
-    margin: 0;
-    padding: 0;
-}
-
 #PorqueNos .btn__saiba__mais{
     display: none;
 }
@@ -45,7 +40,7 @@ header .bnt--black:hover{
 
 @media all and (min-width:992px) {
     #PorqueNos .btn__saiba__mais{
-        display: block;
+        display: inline-block;
     }
 
     .btn--change--slide--item{
